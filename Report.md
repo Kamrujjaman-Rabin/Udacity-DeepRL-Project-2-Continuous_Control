@@ -1,34 +1,13 @@
-# DeepRL-Navigation
+# DeepRL-Continuous Control
 Project 2 "Continuous Control" of the Deep Reinforcement Learning nanodegree.
 
+Given the uncertainities for this project be reviewed by the same reviewer, I am describing my background again first. Basically, I am a civil engineer from Bangladesh who doesn't know civil engineering much let alone RL. RL is like Hebrew, not only RL the whole CS things seem like Hebrew to me- top to bottom I don't understand anything. I did only a Python course in my undergrad. That's it. Yet I tried this Nanodegree. Why? Firstly, I got one month free access to Udacity which I cannot afford otherwise. Secondly, I got an admission in an Erasmus Joint Master Degree Program of Hydroinformatics in Europe. My program arranges a conference named 'Symhydro'. The accepted papers of that conference get published in collarboration with Springer Water in a journal namely 'Advances in Hydroinformatics'. I read one of the papers from there- 'Large Markov Decision Processes Based Management Strategy of Inland Waterways in Uncertain Context.' I read the paper and didn't understand anything. That's how I got interest in RL and took the resolution to decode RL, though in reality I didn't understand many things while reading and doing so.
+
+Thanks to the solution notebooks by Udacity and also the alumni of this Nanodegree. The solution codes I use here are managed through visiting their GitHub Repositories. Now, if I pass this nanodegree and get the certificate, I will be the happiest man in the world.
+
+
 ## Learning Algorithm
-
-To be honest, I copied, pasted, and slightly modified the source code of the Udacity repository https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum. Because Udacity recommends us to do it in `Part 3: Policy-Based Methods; Project: Continuous Control; 7. Not sure where to start?`
-
-<p align="center">
- <img src="/images/not-sure-where-to-start.png" width="50%">
-</p>
-
-I copied the solution code because I'm sick of Covid-19. Fortunately, I'm recovering. I feel very tired. Otherwise I'm an expert in Deep Reinforcement Learning as you can see in the seminars I gave last year:
-
-Webinar on Deep Reinforcement Learning (Secure & Private AI Scholarship Challenge)<br/>
-https://youtu.be/oauLZG9nAX0
-
-Deep Reinforcement Learning (IEEE Computer Society)<br/>
-https://youtu.be/rf91xKkoP6w
-
-In summary, Deep Reinforcement Learning (Deep RL) is an extension of Reinforcement Learning (RL) that uses Deep Learning techniques in order to handle complex continuous states instead of simple discrete states. RL is the branch of artificial intelligence that programs algorithms capable of learning and improving from experience in the form of SARS tuples: State 0, Action, Reward, and State 1. This kind of algorithms and problems are very general because they are based on search algorithms, general problem solvers (GPS), and statistics.
-
-In my presentation at http://bit.do/DeepRL, there is a great explanation of the DQN algorithm:
-- The DQN Agent senses the environment and take some actions to maximize the total reward.
-- The deep neural network to represent complex states can be as complex as a convolutional neural network capable of seeing raw pixels; and actions can be the combinations of directions and buttons of a joystick.
-- We define a loss function based on the formulae of RL. In that way, an RL problem is transformed into a supervised learning problem because we can apply the gradient descent technique to minimize the loss function.
-
-<p align="center">
- <img src="/images/math.png">
-</p>
-
-However, this Project 2 goes beyond DQN. Because it includes new Deep RL techniques:
+This Project 2 goes beyond DQN. Because it includes new Deep RL techniques:
 - **Actor-critic method** in which the actor computes policies to act and the critic helps to correct the policies based on its Q-values;
 - **Deep Deterministic Policy Gradients (DDPG)**, which is similar to actor-critic methods but it differs because the actor produces a deterministic policy instead of stochastic policies; the critic evaluates such deterministic policy; and the actor is trained by using the deterministic policy gradient algorithm;
 - **Two sets of Target and Local Networks**, which is a way to implement the double buffer technique in order to avoid oscillations caused by overestimated values;
@@ -80,9 +59,8 @@ LR_CRITIC = 2e-4
 WEIGHT_DECAY = 0        
 ```
 
-### How I modified the Udacity's DDPG Pendulum to make this project work so well
-
-I copied, pasted, and slightly modified the source code of the Udacity repository https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum.
+### How I modified the Udacity's DDPG Pendulum to make this project work well
+As I already mentioned, I took help from the repositories of Alumni of this nanodegree TBH.
 
 First, Udacity's DDPG Pendulum uses OpenAI Gym and this project uses Unity to simulate the environment. Hence, I needed to modify the code in the Jupyter notebook to make it work properly.
 
@@ -237,7 +215,7 @@ In the graph, the blue lines connect the scores in each episode. There is only 1
 
 ## Ideas for Future Work
 
-I can improve this DDPG Agent because it is just a copy of the source code of the Udacity repository https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum. I even copied the hyperparameters and I modified them just a little bit. I did an excellent job at meta-optimizing the hyperparameters. However, I should accept that there could be a better set of hyperparameters. Therefore, there is room for improvement.
+There could be a better set of hyperparameters. Therefore, there is room for improvement.
 
 So far, this implementation has only `5` techniques: 
 - Deep Deterministic Policy Gradients (DDPG);

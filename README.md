@@ -61,7 +61,7 @@ Execute this command in order to install the software specified in `requirements
 This command is executed at the beginning of the Jupyter notebook [Continuous_Control.ipynb](Continuous_Control.ipynb).
 
 If you have troubles when installing this project, you can write me at:<br/>
-https://www.linkedin.com/in/jckuri/
+https://www.linkedin.com/in/kamrujjaman-rabin-82029a13a/
 
 ## Instructions
 
